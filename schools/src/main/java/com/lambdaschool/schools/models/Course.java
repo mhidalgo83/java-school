@@ -14,6 +14,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class Course
      */
     @Column(nullable = false,
         unique = true)
-
+    @Size(min = 2, max = 50, message = "Course name must be between 2 and 50 characters.")
     private String coursename;
 
     /**
