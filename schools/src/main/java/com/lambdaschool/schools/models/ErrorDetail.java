@@ -7,12 +7,11 @@ import java.util.List;
 // Class for custom error details (what we will be returning to the client)
 
 public class ErrorDetail {
-
     private String title;
     private int status;
     private String detail;
     private Date timestamp;
-    private String developerMessage;
+    private String developer;
 
     private List<ValidationError> errors = new ArrayList<>();
 
@@ -48,13 +47,6 @@ public class ErrorDetail {
         this.timestamp = timestamp;
     }
 
-    public String getDeveloperMessage() {
-        return developerMessage;
-    }
-
-    public void setDeveloperMessage(String developerMessage) {
-        this.developerMessage = developerMessage;
-    }
 
     public List<ValidationError> getErrors() {
         return errors;
@@ -62,5 +54,13 @@ public class ErrorDetail {
 
     public void setErrors(List<ValidationError> errors) {
         this.errors = errors;
+    }
+
+    public String getDeveloper() {
+        return developer;
+    }
+
+    public void setDeveloper(String developer) {
+        this.developer = developer;
     }
 }

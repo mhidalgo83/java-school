@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,8 +36,9 @@ public class Course
     /**
      * Name (String) of this Course. Cannot be null and must be unique
      */
-    @Column(nullable = true,
+    @Column(nullable = false,
         unique = true)
+
     private String coursename;
 
     /**
