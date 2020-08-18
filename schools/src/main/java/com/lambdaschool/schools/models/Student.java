@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +34,7 @@ public class Student
      */
     @Column(nullable = false,
         unique = true)
+    @Size(min = 2, max = 30, message = "Student name must be between 2 and 30 characters.")
     private String name;
 
     /**
